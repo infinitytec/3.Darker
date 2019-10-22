@@ -5,6 +5,7 @@
 // @description  Darker theme for 3.0. Distributed under the MIT license.
 // @author       infinitytec
 // @match        https://scratch.mit.edu/projects/*
+// @match        https://scratch.org/projects/*
 // @grant        GM_addStyle
 // @updateURL    https://github.com/infinitytec/3.Darker/raw/master/3darker.user.js
 // ==/UserScript==
