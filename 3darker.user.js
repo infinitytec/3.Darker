@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         3.Darker
 // @namespace    infinitytec.github.io
-// @version      1.6
+// @version      1.6.1
 // @description  Darker theme for 3.0. Distributed under the MIT license.
 // @author       infinitytec
 // @match        https://scratch.mit.edu/projects/*
 // @match        https://scratch.org/projects/*
+// @match        https://aero-a.github.io/scratch-gui/*
 // @grant        GM_addStyle
 // @updateURL    https://github.com/infinitytec/3.Darker/raw/master/3darker.user.js
 // ==/UserScript==
