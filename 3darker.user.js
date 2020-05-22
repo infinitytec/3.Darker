@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         3.Darker
 // @namespace    infinitytec.github.io
-// @version      1.6.1
+// @version      1.7
 // @description  Darker theme for 3.0. Distributed under the MIT license.
 // @author       infinitytec
 // @match        https://scratch.mit.edu/projects/*
@@ -70,4 +70,6 @@
     GM_addStyle(".sprite-selector-item_is-selected_24tQj {background:transparent !important;}");
     //Fixing white area around the paint editor
     GM_addStyle(".paint-editor_canvas-container_x2D0a {border: 1px solid var(--accent); overflow: hidden; }");
+    //Tweaks for updated paint editor
+    GM_addStyle(".paper-canvas_paper-canvas_1y588 {background-color: var(--secondary-bg); border-radius: .4rem;} .paint-editor_canvas-container_x2D0a {border: 2px solid var(--accent); border-radius: .4rem; }");
 })();
