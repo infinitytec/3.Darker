@@ -1,19 +1,16 @@
-/* 3.Darker CSS.
-Built by infinitytec. 
-Version 1.8.
+/*These are the modifications from https://raw.githubusercontent.com/ScratchAddons/ScratchAddons/master/addons/editor-dark-mode/3darker.css
+
+NOT FOR USE.
+
 */
-
-
-/*3.0 Theme Userscript Framework by infinitytec. Released under the MIT license.*/
 /*Set colors for the editor. Names should explain what they are. They will automatically be applied to different parts of the editor. For the purpose of simplification, the red cancel button and the hover/active/focus effects are hard-coded. The effects use filters so they should be good-to-go in most cases.*/
 :root {
   --main-bg: #111111;
   --secondary-bg: #151515;
   --accent: #202020;
-  --text: #bfbfbf;
+  --text: #ffffff;
 }
 
-/*Main UI bar, similar bars, and dropdown menu*/
 .menu-bar_main-menu_3wjWH,
 .modal_header_1h7ps,
 .menu-bar_account-info-group_MeJZP,
@@ -22,23 +19,35 @@ Version 1.8.
   background: var(--accent);
 }
 
-/*Main background*/
 .gui_body-wrapper_-N0sA,
 .blocklySvg {
   background: var(--main-bg);
 }
 
-/*Scripting area background*/
 .blocklyMainBackground {
   fill: var(--secondary-bg) !important;
 }
 
-/*Right-click & pop-ups*/
+.context-menu_context-menu_2SJM-,
+.blocklyWidgetDiv .goog-menu,
+.goog-menuitem-highlight
+/*s-a* *s-a*/
+,
+.s3dev-mi:hover
+
+/*s-a* *s-a*/
+.Popover-body {
+  background: var(--accent)
+    /*s-a* !important *s-a*/
+  ;
+  color: var(--text)
+    /*s-a* !important *s-a*/
+  ;
+}
+
 .context-menu_context-menu_2SJM-,
 .blocklyWidgetDiv .goog-menu,
 .Popover-body {
-  background: var(--accent) !important;
-  color: var(--text) !important;
   border: 1px solid white;
 }
 
@@ -50,21 +59,20 @@ Version 1.8.
 /*Highlight*/
 .blocklyWidgetDiv .goog-menuitem-highlight,
 .blocklyWidgetDiv .goog-menuitem-hover,
+.s3dev-mi:hover,
+/*s-a* *s-a*/
 .context-menu_menu-item_3cioN:hover {
   background-color: #ffffff33 !important;
 }
 
-/*Palette*/
 .blocklyFlyoutBackground {
   fill: var(--accent) !important;
 }
 
-/*Palette text*/
 .blocklyFlyoutLabelText {
   fill: var(--text) !important;
 }
 
-/*Toolbox, extension connection box*/
 .connection-modal_bottom-area_AHeQ3,
 .connection-modal_body_3YO9j,
 .blocklyToolboxDiv,
@@ -73,12 +81,10 @@ Version 1.8.
   color: var(--text);
 }
 
-/*Selected category*/
 .scratchCategoryMenuItem.categorySelected {
   background: #ffffff22;
 }
 
-/*Sprite and stage selection area*/
 .sprite-selector_sprite-selector_2KgCX,
 .stage-selector_stage-selector_3oWOr,
 .stage-selector_label_1MCfr,
@@ -88,15 +94,18 @@ Version 1.8.
 }
 
 .sprite-info_sprite-info_3EyZh,
-.stage-selector_header_2GVr1,
-.stage-selector_header-title_33xCt,
-.stage-selector_header-title_33xCt,
-.sprite-selector-item_sprite-selector-item_kQm-i:hover {
+.sprite-selector-item_sprite-selector-item_kQm-i:hover,
+.stage-selector_header_2GVr1 {
   background: var(--secondary-bg);
   color: var(--text);
 }
 
-/*Palette Buttons*/
+.stage-selector_header-title_33xCt,
+.stage-selector_header-title_33xCt {
+  /* background: var(--secondary-bg); */
+  color: var(--text);
+}
+
 .blocklyFlyoutButtonBackground {
   fill: var(--accent) !important;
 }
@@ -111,18 +120,15 @@ blocklyFlyoutButton>text.blocklyText {
   fill: var(--text) !important;
 }
 
-/*Text fill of "Make A" buttons*/
 .blocklyFlyoutButton .blocklyText {
   fill: var(--text) !important;
 }
 
-/*Backpack header*/
 .backpack_backpack-header_6ltCS {
   background: var(--accent);
   color: var(--text);
 }
 
-/*Backpack*/
 .backpack_backpack-list-inner_10a2A {
   background: var(--secondary-bg);
 }
@@ -137,7 +143,6 @@ blocklyFlyoutButton>text.blocklyText {
   mix-blend-mode: normal;
 }
 
-/*Paint & sound editor sidebar*/
 .selector_list-area_1Xbj_ {
   background: var(--accent);
 }
@@ -146,7 +151,6 @@ blocklyFlyoutButton>text.blocklyText {
   background: none;
 }
 
-/*Paint & sound editor main*/
 .asset-panel_wrapper_366X0 {
   background: var(--secondary-bg);
   color: var(--text);
@@ -157,20 +161,17 @@ blocklyFlyoutButton>text.blocklyText {
   color: var(--text);
 }
 
-/*Paint and sound editor buttons*/
 img.tool-select-base_tool-select-icon_tJ-rr,
 .sound-editor_trim-button_lSENI {
   filter: brightness(2);
 }
 
-/*Sprite costume selector text*/
 .selector_list-item_3N_u7,
 .sprite-selector-item_sprite-name_1PXjh,
 .sprite-selector-item_sprite-details_2UVpA {
   color: var(--text);
 }
 
-/*Tabs*/
 .gui_tab_27Unf.gui_is-selected_sHAiu {
   background: var(--accent);
   color: var(--text);
@@ -187,7 +188,6 @@ img.tool-select-base_tool-select-icon_tJ-rr,
   color: var(--text);
 }
 
-/*New variable/list/custom block*/
 .prompt_body_18Z-I,
 .custom-procedures_body_SQBv6,
 div.custom-procedures_option-card_BtHt3 {
@@ -201,7 +201,6 @@ div.custom-procedures_option-card_BtHt3 {
   background: #ff3a5b;
 }
 
-/*Fullscreen view*/
 .stage_stage-wrapper-overlay_fmZuD,
 .stage-header_stage-header-wrapper-overlay_5vfJa {
   background: black;
@@ -211,17 +210,12 @@ div.custom-procedures_option-card_BtHt3 {
   border: none;
 }
 
-/*Library and card backgrounds*/
 .library_library-scroll-grid_1jyXm,
-.modal_modal-content_1h3ll.modal_full-screen_FA4cr,
-.card_step-body_2bFkf,
-.card_left-card_1KpEh,
-.card_right-card_3IrbD {
+.modal_modal-content_1h3ll.modal_full-screen_FA4cr {
   background: var(--accent);
   color: var(--text);
 }
 
-/*Library items & filter bar*/
 .library-item_library-item-extension_3xus9,
 .library-item_library-item_1DcMO,
 .library_filter-bar_1W0DW {
@@ -234,58 +228,64 @@ div.custom-procedures_option-card_BtHt3 {
   color: var(--text) !important;
 }
 
-/*Text input*/
-input[type=text],
+input[type="text"]:not([name="title"]):not([name="q"]):not([name="username"]):not([type="password"]):not([name="password"]):not([name="passwordConfirm"]):not(#showPassword):not(.monitor_list-input_3kw5o),
 .input_input-form_1Y0wX,
 .prompt_variable-name-text-input_1iu8- {
   background: var(--accent);
   color: var(--text) !important;
 }
 
-input[type=text]:hover,
-input[type=text]:focus {
+input[type="text"]:not([name="title"]):not([name="q"]):not([name="username"]):not([type="password"]):not([name="password"]):not([name="passwordConfirm"]):not(#showPassword):not(.monitor_list-input_3kw5o):hover,
+input[type="text"]:not([name="title"]):not([name="q"]):not([name="username"]):not([type="password"]):not([name="password"]):not([name="passwordConfirm"]):not(#showPassword):not(.monitor_list-input_3kw5o):focus,
+input[type="password"][name="password"]:hover,
+input[type="password"][name="password"]:focus {
   background: var(--accent);
   filter: brightness(90%);
 }
 
-/*Buttons (inverted for dark theme)*/
 .blocklyZoom,
-.stage-header_stage-button_hkl9B,
+[class^="gui_stage-and-target-wrapper"] [class^="button_outlined-button"]:not([class*="menu-bar"]):not([class*="modal"]):not([class*="tag-button_active"]),
 .sound-editor_round-button_3NLcW,
 .sound-editor_button-group_SFPoV {
   filter: invert(100) hue-rotate(180deg);
 }
 
-/*Set the selected costume/backdrop to have a transparent background as default*/
 .sprite-selector-item_is-selected_24tQj {
   background: transparent !important;
 }
 
-/*Fixing white area around the paint editor*/
 .paint-editor_canvas-container_x2D0a {
   border: 1px solid var(--accent);
   overflow: hidden;
 }
 
-/*Tweaks for updated paint editor*/
 .paper-canvas_paper-canvas_1y588 {
   background-color: var(--secondary-bg);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .paint-editor_canvas-container_x2D0a {
   border: 2px solid var(--accent);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
-/*Tweaks for users not signed in*/
-.card_card_3GG7C,
-.card_left-card_1KpEh,
-.card_right-card_3IrbD {
-  border: 1px solid hsla(216, 49%, 90%, 0.14);
+.Popover-body {
+  background: var(--secondary-bg);
+  border-color: var(--accent-color);
 }
 
-/*Scrollbar*/
-.blocklyScrollbarHandle {
-  fill: #CECDCE55;
+[class^="color-picker_row-header"] {
+  color: var(--text);
+}
+
+[class^="color-picker_divider"] {
+  border-color: var(--accent-color);
+}
+
+[class^="color-picker_swatch"] {
+  border-color: var(--accent-color);
+}
+
+.stage-wrapper_full-screen_2hjMb {
+  background-color: black !important;
 }
